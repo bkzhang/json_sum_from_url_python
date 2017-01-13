@@ -6,7 +6,7 @@ page_number = 1
 total_price = 0
 
 while not is_empty:
-	url = '' # insert url in quotes, for page indicator change page number to {} ie. &page=1 -> &page={} 
+	url = ''.format(page_number) # insert url in quotes, for page indicator change page number to {} ie. &page=1 -> &page={} 
 	json_file = urllib2.urlopen(url)
 	data = json.load(json_file)
 	if not data['orders']: # replace orders with proper list variable
